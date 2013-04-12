@@ -1,0 +1,41 @@
+﻿@using FirstAsp.NetMVCApp.Models
+@model IEnumerable<FirstAsp.NetMVCApp.Models.ToDo>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>TodosList</title>
+</head>
+<body>
+    <div>
+        Hello        
+        
+        <div>
+            ClassName: @this.GetType().ToString()
+        </div>
+        <div>
+            BaseClassName: @this.GetType().BaseType.ToString()
+        </div>
+
+        <table>
+            <tbody>
+                <tr>
+                    <th>Id</th>
+                    <th>Description</th>
+                </tr>
+                @foreach(ToDo t in Model) {
+                    <tr>
+                        <td>@t.Id</td>
+                        <td>@t.Description</td>
+
+                    </tr>
+                    
+                }
+
+            </tbody>
+
+
+        </table>
+    </div>
+</body>
+</html>
